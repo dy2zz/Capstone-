@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiBear Network</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
+</head>
+<body>
+
+    <header class="container">
+        <div class="nav">
+            <div class="logo">
+                <img src="logo.png" alt="logo">
+            </div>
+             <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <nav class="menu">
+                <div class="close-menu" onclick="toggleMenu()">&times;</div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#subscription">Subscription</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="register"><a href="#">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="main" id="content">
+        <div class="content" >
+            <div class="text-container">
+            <h1 class="title">GET AND STAY <br> CONNECTED <br> WITH US NOW!</h1>
+            <p class="description">"Innovation and Future-Proof Technology with Superb Customer Service."</p>
+        </div>
+            <div class="buttons">
+                <button class="client-login">CLIENT LOGIN</button>
+                <button class="watch-video">
+                    <img src="play.png" alt="Play"> WATCH VIDEO
+                </button>
+            </div>
+        </div>
+    </section>
+    <svg class="transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#f5f5f5" fill-opacity="1" d="M0,160L80,154.7C160,149,320,139,480,149.3C640,160,800,192,960,213.3C1120,235,1280,245,1360,250.7L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+    </svg>
+    <section class="about" id="about">
+        <div class="about-us" >
+            <div class="atext">
+                <h1 class="atitle">About Us</h1>
+                <p class="adescription">
+                    Learn more about our journey and commitment to providing top-quality internet services.
+                </p>
+            </div>
+
+            <div class="cards-container">
+                <div class="card">
+                    <img src="smiley.png" alt="Smiley Face">
+                    <h3>Our History</h3>
+                    <p>Our mission is to provide the most affordable and quality Information, Communication, and Technological services all over the country.</p>
+                    <button class="readmore" onclick="openModal('history-modal')">Read More</button>
+                </div>
+            
+                <!-- Our Mission Card -->
+                <div class="card">
+                    <img src="child-2.png" alt="Our Mission">
+                    <h3>Our Mission</h3>
+                    <p>FiBear Network Technologies Corp. (FTNC) is an IT Company formally established on June 06, 2022.</p>
+                    <button class="readmore" onclick="openModal('mission-modal')">Read More</button>
+                </div>
+            
+                <!-- Our Vision Card -->
+                <div class="card">
+                    <img src="child-3.png" alt="Our Vision">
+                    <h3>Our Vision</h3>
+                    <p>Our vision is to achieve 100% customer satisfaction by delivering quality services at an affordable rate...</p>
+                    <button class="readmore" onclick="openModal('vision-modal')">Read More</button>
+                </div>            
+            </div>
+        </div>
+    </section>
+    <svg class="transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#f5f5f5" fill-opacity="1" d="M0,256L80,250.7C160,245,320,235,480,213.3C640,192,800,160,960,149.3C1120,139,1280,149,1360,154.7L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+    </svg>
+    
+    <section class="services" id="services">
+        <div class="stext">
+            <h1 class="stitle">Services</h1>
+            <p class="sdescription">
+                Provide fast, reliable & stable internet with efficient & effective repair teams and have a courteous and accommodating customer relation team. Good after sales and customer relations services where you can talk to us thru group chats or Call & Text messages regarding to your Concerns
+            </p>
+        </div>
+    
+        <div class="scards-container">
+            <div class="scards-container">
+                <div class="scard">
+                    <div class="image-container">
+                        <img src="jobopportunities.png" alt="service1">
+                    </div>
+                    <div class="icon-overlay">
+                        <i class="fa-solid fa-cogs"></i>
+                    </div>
+                    <div class="text-content">
+                        <h3>Fiber Optic Network Installation</h3>
+                        <p>We offer fiber optic broadband connection to the community to provide high-speed internet services to residentials and commercials.</p>
+                    </div>
+                </div>
+            
+                <div class="scard">
+                    <div class="image-container">
+                        <img src="jobopportunities.png" alt="service2">
+                    </div>
+                    <div class="icon-overlay">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+                    <div class="text-content">
+                        <h3>Internet Package</h3>
+                        <p>We offer a variety of affordable internet plans to meet the needs of different customers, from basic plans for individual users to more advanced plans for businesses and organizations.</p>
+                    </div>
+                </div>
+            
+                <div class="scard">
+                    <div class="image-container">
+                        <img src="jobopportunities.png" alt="service3">
+                    </div>
+                    <div class="icon-overlay">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div class="text-content">
+                        <h3>Technical Support</h3>
+                        <p>Our team of experienced professionals provides technical support to ensure that our networks are always running smoothly.</p>
+                    </div>
+                </div>
+            
+                <div class="scard">
+                    <div class="image-container">
+                        <img src="jobopportunities.png" alt="service4">
+                    </div>
+                    <div class="icon-overlay">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="text-content">
+                        <h3>Customer Service</h3>
+                        <p>We are committed to providing excellent customer service, and our support team is available 24/7 to answer questions and troubleshoot any issues.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <svg class="transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#f5f5f5" fill-opacity="1" d="M0,160L80,154.7C160,149,320,139,480,149.3C640,160,800,192,960,213.3C1120,235,1280,245,1360,250.7L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+    </svg>
+
+    <section class="Subscription">
+        <div class="sbtext" id="subscription">
+            <h1 class="sbtitle">Choose Your Right Plan</h1>
+            <p class="sbdescription">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate voluptatum culpa error laborum, consequuntur aliquid qui debitis vero vitae illum fugiat ex, dolorem quisquam excepturi voluptatibus tenetur, omnis maxime laboriosam. </p>
+        </div>
+
+        <div class="sbcards-container">
+            <div class="sbcards">
+                <div class="left-text">
+                    <h3>Plan Bronze</h3>
+                    <p>P800 <br>Per Month</p>
+                    <button class="planmore">Get Started</button>
+                </div>
+                <div class="right-text">
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Up to ....</li>
+                        <li><i class="fa-solid fa-check"></i>Up to ....</li>
+                        <li><i class="fa-solid fa-check"></i>Up to ....</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sbcards">
+                <div class="left-text">
+                    <h3>Plan Silver</h3>
+                    <p>P800<br>Per Month</p>
+                    <button class="planmore">Get Started</button>
+                </div>
+                <div class="right-text">
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Up to ....</li>
+                        <li><i class="fa-solid fa-check"></i>Up to ....</li>
+                        <li><i class="fa-solid fa-check"></i>Up to ....</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sbcards">
+                <div class="left-text">
+                    <h3>Plan Gold</h3>
+                    <p>P800 <br>Per Month</p>
+                    <button class="planmore">Get Started</button>
+                </div>
+                <div class="right-text">
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Up to ....</li>
+                        <li><i class="fa-solid fa-check"></i>Up to ....</li>
+                        <li><i class="fa-solid fa-check"></i>Up to ....</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sbcards">
+                <div class="left-text">
+                    <h3>Plan Platinum</h3>
+                    <p>P800 <br>Per Month</p>
+                    <button class="planmore">Get Started</button>
+                </div>
+                <div class="right-text">
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Up to ....</li>
+                        <li><i class="fa-solid fa-check"></i>Up to ....</li>
+                        <li><i class="fa-solid fa-check"></i>Up to ....</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sbcards">
+                <div class="left-text">
+                    <h3>Plan Diamond</h3>
+                    <p>P800 <br>Per Month</p>
+                    <button class="planmore">Get Started</button>
+                </div>
+                <div class="right-text">
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Up to ....</li>
+                        <li><i class="fa-solid fa-check"></i>Up to ....</li>
+                        <li><i class="fa-solid fa-check"></i>Up to ....</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <svg class="transition" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#f5f5f5" fill-opacity="1" d="M0,256L80,250.7C160,245,320,235,480,213.3C640,192,800,160,960,149.3C1120,139,1280,149,1360,154.7L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+    </svg>
+    <section class="contact" id="contact">
+        <div class="ctext">
+            <h1 class="ctitle">Contact Us</h1>
+        </div>
+        <div class="c-container">
+            <div class="cleft">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" autocomplete="name">
+
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter your email" autocomplete="email">
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Subject of the Message" autocomplete="off">
+
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Enter your message"></textarea>
+
+                <button type="submit" class="sbmit">Submit</button>
+            </div>
+
+            <div class="cright">
+                <h2>Get in Touch with Our Team -- We're Here to Help</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda animi totam neque, ea doloribus voluptatem esse officiis laboriosam culpa veritatis explicabo quidem voluptates deserunt eveniet ipsum blanditiis qui, nisi ad.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>123-123-123123 | 123-123-124</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>adjkak@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>asdaswqwfd egsfsdfasdas</p>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.622111504242!2d121.17414431477698!3d14.588133789821917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7bbf5b6d9f9%3A0x9bfaa6e8c91a0f19!2sKasiglahan%20Village%2C%20San%20Jose%2C%20Rodriguez%2C%20Rizal!5e0!3m2!1sen!2sph!4v1643434431443!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="fcontainer">
+            <!-- Left Section (Company Info & Contacts) -->
+            <div class="fleft">
+                <h2 class="ftitle">FIBEAR NETWORK TECHNOLOGIES CORP.</h2>
+                <p>LBlk 18 Lot 95 Phase 1D Kasiglahan Village, San Jose, Rod, Rizal Philippines</p>
+    
+                <!-- Contact Information -->
+                <div class="fcontacts">
+                    <p><i class="fas fa-phone"></i> 123-456-7890</p>
+                    <p><i class="fas fa-envelope"></i> contact@company.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Street, City, Country</p>
+                </div>
+            </div>
+    
+    
+            <div class="fright">
+                <h4>Get Our Mobile App</h4>
+                <img src="qrcode.png" alt="QR Code" class="qr-code"><p>or</p>
+                <button class="download-btn">Download Now</button>
+                <h4>Our Social Network</h4>
+                <p>You may also visit our official <br>social networks account at the following:</p>
+                <div class="ficons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="history-modal" class="modal">
+        <div class="modal-box">
+            <span class="modal-close" onclick="closeModal('history-modal')">×</span>
+            <img src="logo.png" class="logos" alt="logo">
+            <h3>"Innovation in Connectivity, Excellence in Service"</h3>
+            <div class="modal-content"> <!-- Added a wrapper for the text content -->
+                <p>
+                    Discover a new era of internet connectivity with Fibear Network Technologies Corp. , where cutting-edge
+                    technology meets a steadfast commitment to customer satisfaction. Our focus on innovative solutions and
+                    prompt, effective service ensures that every connection we make enhances the quality of life for our
+                    customers. Join us in transforming the way communities connect and grow, with Fibear Network
+                    Technologies Corp. leading the way.
+    
+                    <br><br>
+    
+                    <b>Our Services</b>
+                    <br>
+                    At Fibear Network Technologies Corp. , we offer a comprehensive range of internet connectivity solutions
+                    tailored to meet the needs of both residential customers and businesses that utilize vendo WiFi machines.
+                    Our commitment to excellence ensures that every connection we provide is fast, reliable, and designed to
+                    enhance your online experience.
+    
+                    <br><br>
+    
+                    <b>Residential Internet Services</b>
+                    <br>
+                    Our residential internet services are designed to bring the world to your home with seamless connectivity.
+                    Whether you’re streaming your favorite shows, gaming online, working from home, or keeping in touch with
+                    loved ones, Fibear Network Technologies Corp. delivers high-speed internet that keeps you connected. We
+                    offer various plans to suit different usage needs and household sizes, ensuring that you always have the
+                    bandwidth you require.
+    
+                    <br><br>
+    
+                    <b>High-Speed Plans:</b> Choose from a variety of plans that offer different speeds to match your
+                    household’s internet usage.
+    
+                    <br><br>
+    
+                    <b>24/7 Customer Support:</b> Enjoy peace of mind with our round-the-clock customer support, ready to
+                    assist with any issues or questions.
+    
+                    <br><br>
+    
+                    <b>Wi-Fi Solutions:</b> Get reliable Wi-Fi coverage throughout your home with our advanced router options.
+    
+                    <br><br>
+    
+                    <b>Business Internet Services</b>
+                    <br>
+                    For businesses that utilize vendo WiFi machines, Fibear Network Technologies Corp. provides robust internet
+                    solutions that support your operational needs and drive your growth. Our business internet services are
+                    specifically designed to keep your vendo WiFi machines running smoothly, ensuring that your customers have
+                    reliable access to the internet.
+    
+                    <br><br>
+    
+                    <b>Vendo WiFi Support:</b> Specialized internet plans tailored for businesses using vendo WiFi machines,
+                    providing the necessary bandwidth and stability.
+    
+                    <br><br>
+    
+                    <b>Priority Support:</b> Benefit from priority customer service and technical support to keep your vendo WiFi
+                    machines online and productive.
+    
+                    <br><br>
+    
+                    <b>Why Choose Fibear Network Technologies Corp. ?</b>
+                    <br>
+                    <b>Reliability:</b> Our state-of-the-art infrastructure ensures a stable and fast internet connection.
+                    <br>
+                    <b>Customer Service:</b> We prioritize customer satisfaction with prompt responses and effective solutions
+                    to any issues.
+                    <br>
+                    <b>Local Expertise:</b> As a local provider, we understand the unique needs of our community and are
+                    dedicated to serving you better.
+    
+                    <br><br>
+    
+                    Join us at Fibear Network Technologies Corp. and experience the difference that dedicated, high-quality
+                    internet service can make in your home or business. With Fibear Network Technologies Corp. , you’re not
+                    just getting a connection; you’re gaining a partner in your digital journey.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mission-modal" class="modal">
+        <div class="modal-box" id="missions-modal">
+            <span class="modal-close" onclick="closeModal('mission-modal')">×</span>
+            <h3>Our Mission</h3>
+            <div class="modal-content">
+                <p>Our Mission is to provide the most affordable and quality Information, Communication and Technological Services
+                    all over the country.
+    
+                    <br><br>
+    
+                    The following will be the company’s blue prints in order to achieve this mission:
+                    <br>
+                    1. Continue to improve our services by seeking new ways, means and technology that will adapt to the
+                    changing needs of the clients.
+                    <br>
+                    2. Create and cultivate long-term business relationships with clients and business partners.
+                    <br>
+                    3. Provide the best customer service possible.
+                    <br>
+                    4. Expand the company’s network by offering better technology offered by existing competitors at a more
+                    affordable price
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="vision-modal" class="modal">
+        <div class="modal-box" id="visions-modal">
+            <span class="modal-close" onclick="closeModal('vision-modal')">×</span>
+            <h3>Our Vision</h3>
+            <div class="modal-content">
+                <p>Our Vision is to achieve 100% customer satisfaction by delivering quality services at an affordable rate.
+                    Our forward vision is to strive to become a known entity in the field of Wi-Fi vending machine technology,
+                    capable of providing solutions to the growing and evolving needs of clients.
+    
+                    <br><br>
+    
+                    What we want to achieve?
+                    <br>
+                    1. Become the leading affordable ICT service provider in the country.
+                    <br>
+                    2. Become the one-stop shop of all Information and Technology needs of clients.
+                    <br>
+                    3. Gain the confidence and trust of our clients and business partners in this business field.
+                    <br>
+                    4. Employ, Train and Produce talents that will work collaboratively and productively with the company towards
+                    mutual growth and development.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
