@@ -7,9 +7,9 @@
 
 /* General Body Styles */
 body {
-    font-family: 'Arial', sans-serif; /* Modern sans-serif font */
-    background-color: #e6e6e6; /* Light gray background */
-    color: #333; /* Dark gray text */
+    font-family: 'Arial', sans-serif;
+    background-color: #e6e6e6;
+    color: #333;
     line-height: 1.6;
 }
 
@@ -19,10 +19,12 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 80px; /* Fixed height for consistent look */
-    background-color: #fff; /* White background */
-    padding: 0 2rem; /* Horizontal padding */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    height: 80px;
+    background-color: #fff;
+    padding: 0 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 103;
 }
 
 .nav {
@@ -35,8 +37,9 @@ body {
 
 /* Logo */
 .logo img {
-    height: 40px; /* Adjust logo size */
+    height: 40px;
 }
+
 .menu {
     display: flex;
     align-items: center;
@@ -47,13 +50,13 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 1rem; 
+    gap: 1rem;
     margin-right: 5rem;
 }
 
 .menu li a {
     text-decoration: none;
-    color: #555; 
+    color: #555;
     font-size: 1rem;
     font-weight: 500;
     padding: 0.5rem 1rem;
@@ -62,39 +65,40 @@ body {
 }
 
 .menu li a:hover {
-    color: #007bff; /* Blue on hover */
-    background-color: rgba(0, 123, 255, 0.05); /* Light blue background */
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.05);
 }
 
 /* Register Button */
 .menu li.register a {
-    background-color: #007bff; /* Blue background */
-    color: #fff; /* White text */
+    background-color: #007bff;
+    color: #fff;
 }
 
 .menu li.register a:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
     color: #fff;
 }
 
 /* Mobile Menu Toggle (Hamburger Icon) */
 .menu-toggle {
-    display: none;          /* Hidden on larger screens */
+    display: none;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0rem;
+    right: 3.5rem;
     font-size: 2rem;
     cursor: pointer;
-    z-index: 101;          /* Ensure it's above the menu */
+    z-index: 101;
 }
 
 .close-menu {
-    display: none;          /* Hidden on larger screens */
+    display: none;
 }
 
 /* Responsive Navigation */
 @media (max-width: 1024px) {
-  /* Mobile Menu */
+
+    /* Mobile Menu */
     .menu {
         position: fixed;
         top: 0;
@@ -106,13 +110,13 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start; /* Align items to the top */
-        padding-top: 5rem; 
+        padding-top: 5rem;
         transition: right 0.3s ease;
         z-index: 101; /* Ensure it's above other content */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increased shadow */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='fancy-pants' fill='%23f0f0f0' fill-opacity='0.4'%3E%3Cpath d='M3 22h36v2H3V22zM3 6h36v2H3V6zM3 38h36v2H3V38z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); /* Subtle background pattern */
     }
-    
+
     .close-menu {
         position: absolute;
         top: 10px;
@@ -121,7 +125,7 @@ body {
         color: #333;
         cursor: pointer;
         display: block;
-      }
+    }
 
     .menu.active {
         right: 0; /* Slide in when active class is added */
@@ -130,11 +134,12 @@ body {
     .menu ul {
         flex-direction: column;
         gap: 2rem;
-        text-align: center; /* Center the menu items */
+        text-align: center;
+        margin-left: 4rem;
     }
 
     .menu li a {
-        font-size: 1.2rem; /* Larger text on mobile */
+        font-size: 1.2rem;
         padding: 0.8rem 1.2rem;
     }
 
@@ -142,17 +147,19 @@ body {
         display: block; /* Show hamburger icon on smaller screens */
     }
 }
+
 .transition {
     display: block;
     width: 100%;
     height: auto;
 }
+
 /* HERO SECTION */
 .main {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh; 
+    min-height: 90vh;
     background: url("bg.png") no-repeat center center;
     background-size: cover;
     text-align: center;
@@ -181,7 +188,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
 button {
@@ -228,24 +235,46 @@ button {
         flex-direction: column;
         text-align: center;
         padding: 2rem;
-        min-height: auto; /* Reset for smaller screens */
+        min-height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .content {
-        max-width: 100%; /* Take full width on smaller screens */
+        max-width: 90%;
+        margin-top: 4rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        margin-left: 15rem;
     }
 
     .title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
     }
 
     .description {
         font-size: 1rem;
-        max-width: 80%;
+        max-width: 85%;
+        line-height: 1.4;
+        margin-left: 1rem;
+        margin-bottom: 1.8rem;
     }
 
     .buttons {
-        flex-direction: column; /* Stack buttons on small screens */
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
     }
 }
 
@@ -254,8 +283,9 @@ button {
     padding: 1rem 2rem;
     background-color: #f5f5f5;
     text-align: center;
-    min-height: 67vh; /* Use min-height for flexibility */
+    min-height: 67vh;
 }
+
 .atext {
     margin-top: -2rem;
 }
@@ -273,6 +303,7 @@ button {
     font-size: 0.9rem;
     margin-bottom: 3rem;
 }
+
 .cards-container {
     display: flex;
     justify-content: center;
@@ -332,16 +363,159 @@ button {
     background-color: #e6e6e6;
 }
 
-/* About & Services Section */
-@media (max-width: 768px) {
-    .cards-container,
-    .scards-container {
-        flex-direction: column;
-        gap: 1.5rem;
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 102;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: auto;
+}
+
+/* Modal Content Box */
+.modal-box {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto;
+    max-height: 90vh;
+    overflow: auto;
+}
+
+/* Close Button */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-close:hover {
+    color: black;
+}
+
+/* Modal Content (Scrollable) */
+.modal-content {
+    overflow-y: auto;
+    max-height: calc(100% - 80px);
+    padding-right: 10px;
+}
+
+/* Text Styles */
+.modal-box h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+}
+
+.modal-box p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Logo Image */
+.logos {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+
+/* Responsive Design */
+/* 📌 TABLETS: 769px - 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .modal-box {
+        width: 80%;
+        max-width: none;
+        margin: 2rem auto;
+        text-align: left;
+        margin-top: 5rem;
     }
 
-    .card, .scard {
+    .cards-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .card {
+        width: calc(50% - 1rem);
+        max-width: none;
+    }
+}
+
+/* 📌 NORMAL PHONES: 481px - 768px */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .modal-box {
+        width: 95%;
+        max-width: none;
+        margin: 2rem auto;
+        text-align: left;
+        margin-top: 5rem;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
         width: 100%;
+        max-width: none;
+    }
+}
+
+/* 📌 SMALL PHONES: Up to 480px */
+@media screen and (max-width: 480px) {
+    .modal-box {
+        width: 95%;
+        max-width: none;
+        margin: 1rem auto;
+        padding: 15px;
+        text-align: left;
+        margin-top: 5rem;
+    }
+
+    .logos {
+        max-width: 200px;
+    }
+
+    .modal-content {
+        font-size: 0.9em;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .atitle {
+        font-size: 1.5em;
     }
 }
 
@@ -350,7 +524,7 @@ button {
     padding: 4rem 2rem;
     background: #e6e6e6;
     text-align: center;
-    min-height: 80vh; /* Use min-height for flexibility */
+    min-height: 80vh;
 }
 
 .stext {
@@ -396,11 +570,12 @@ button {
 .scard:hover {
     transform: translateY(-10px);
 }
+
 /* Image Styling */
 .scard .image-container {
     position: relative;
     width: 100%;
-    height: 50%; /* 50% of the card */
+    height: 50%;
     overflow: hidden;
 }
 
@@ -452,107 +627,32 @@ button {
     color: #666;
     margin-top: 0.5rem;
 }
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 102;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    overflow: auto;
-}
 
-/* Modal Content Box */
-.modal-box {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 90%;
-    max-width: 700px;
-    border-radius: 10px;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
-}
-
-/* Close Button */
-.modal-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #aaa;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.modal-close:hover {
-    color: black;
-}
-
-/* Modal Content (Scrollable) */
-.modal-content {
-    overflow-y: auto;
-    max-height: 60vh;
-    padding-right: 10px;
-}
-
-/* Text Styles */
-.modal-box h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 1.5em;
-    color: #333;
-    text-align: center;
-}
-
-.modal-box p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-#missions-modal, #visions-modal {
-    top: 50%;
-    right: 50%;
-    transform: translate(80%, -50%);
-}
-
-/* Logo Image */
-.logos {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    display: block;
-    margin: 1rem auto;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 600px) {
-    .modal-box {
-        width: 95%;
-        max-width: 95%;
-        margin: auto;
+/* Responsive Service Cards */
+@media (max-width: 768px) {
+    .scards-container {
+        flex-direction: column;  /* Stack on smaller screens */
     }
 
-    .logos {
-        max-width: 80%;
+    .scard {
+        width: 90%;  /* Use a percentage for better responsiveness */
+        max-width: 400px; /* Limit the max width */
+        margin: 0 auto; /* Center the cards */
+        margin-bottom: 1rem;
     }
 
-    .modal-box h3 {
-        font-size: 1.2em;
+    .icon-overlay { /* Smaller Icon for better look */
+        font-size: 1.5rem; /* Smaller Icon for better look */
+        width: 60px;
+        height: 60px;
     }
 
-    .modal-content {
-        max-height: 50vh;
+    .scard p {
+        font-size: 0.8rem; /* Use a percentage for better responsiveness */
+    }
+
+    .scard h3 {
+        font-size: 0.9rem;
     }
 }
 
@@ -561,7 +661,7 @@ button {
     padding: 4rem 2rem;
     background-color: #f5f5f5;
     text-align: center;
-    min-height: 70vh; /* Use min-height for flexibility */
+    min-height: 70vh;
 }
 
 .sbtext {
@@ -584,9 +684,11 @@ button {
 /* Cards Container */
 .sbcards-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
-    gap: 20px; /* Adjust spacing between cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     width: 100%;
+    max-width: 1200px; /* Add a max-width to the container */
+    margin: 0 auto; /* Center the container */
 }
 
 .sbcards {
@@ -596,7 +698,7 @@ button {
     justify-content: space-between;
     border-radius: 30px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Each card takes full width of its grid cell */
+    width: 100%;
     min-height: 190px;
     padding: 1.5rem 2.5rem;
     position: relative;
@@ -612,7 +714,6 @@ button {
     flex: 1;
     text-align: center;
 }
-
 
 /* Divider Line */
 .sbcards::before {
@@ -679,19 +780,19 @@ button {
 /* Responsive Design */
 @media (max-width: 1280px) {
     .sbcards-container {
-        grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Adjust for smaller screens */
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
     }
 }
 
 @media (max-width: 768px) {
     .sbcards-container {
-        grid-template-columns: 1fr; /* One per row on smaller screens */
+        grid-template-columns: 1fr;
     }
 
     .sbcards {
         flex-direction: column;
         height: auto;
-        min-height: auto; /* Remove fixed height */
+        min-height: auto;
         text-align: center;
     }
 
@@ -699,12 +800,13 @@ button {
         display: none;
     }
 
-    .left-text, .right-text {
+    .left-text,
+    .right-text {
         text-align: center;
     }
 
     .right-text ul li {
-      justify-content: center;  /* Keep content centered */
+        justify-content: center;
     }
 }
 
@@ -730,7 +832,7 @@ button {
     max-width: 1000px;
     margin: auto;
     align-items: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 /* Left Form - Inside a Box */
@@ -766,13 +868,13 @@ button {
 
 .cleft textarea {
     width: 100%;
-    height: 120px; /* Adjust height as needed */
+    height: 120px;
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
-    resize: vertical; /* Allows resizing if needed */
+    resize: vertical;
 }
 
 .sbmit {
@@ -855,38 +957,37 @@ button {
 }
 
 .map {
-    width: 100%; /* Makes the map responsive */
-    max-width: 800px; /* Limits maximum width */
-    margin: 20px auto; /* Centers the map */
-    border-radius: 10px; /* Adds rounded corners */
-    overflow: hidden; /* Ensures no overflow */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .map iframe {
-    width: 100%; /* Makes the iframe fill the container */
-    height: 260px; /* Default height */
-    border: 0; /* Removes border */
-    border-radius: 10px; /* Matches the container */
+    width: 100%;
+    height: 260px;
+    border: 0;
+    border-radius: 10px;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .map iframe {
-        height: 350px; /* Adjust height for tablets */
+        height: 350px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .map iframe {
-        height: 250px; /* Adjust height for smaller screens */
+        height: 250px;
     }
 }
 
-
 /* Footer Styles */
 .footer {
-    background-color: #0a192f; /* Dark Blue */
+    background-color: #0a192f;
     color: white;
     padding: 2.5rem 0;
 }
@@ -898,8 +999,8 @@ button {
     max-width: 1200px;
     margin: auto;
     padding: 0 2rem;
-    gap: 2rem; /* Added gap */
-    flex-wrap: wrap;  /* Allow wrapping for responsiveness */
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 /* Left Section */
@@ -919,7 +1020,6 @@ button {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    
 }
 
 .fcontacts i {
@@ -927,7 +1027,7 @@ button {
 }
 
 .fright {
-    text-align: center; /* Center align for a cleaner look */
+    text-align: center;
     max-width: 350px;
     padding: 1rem;
 }
@@ -943,13 +1043,13 @@ button {
 .qr-code {
     width: 130px;
     height: 130px;
-    margin: 0.5rem 0 1rem 0; /* Good spacing above and below */
+    margin: 0.5rem 0 1rem 0;
 }
 
 /* Download Button */
 .download-btn {
     display: inline-block;
-    background-color: #1e90ff; /* Bright blue */
+    background-color: #1e90ff;
     color: white;
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
@@ -957,11 +1057,11 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
-    margin-bottom: 1.5rem; /* Space below the button */
+    margin-bottom: 1.5rem;
 }
 
 .download-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
 /* Social Network Section */
@@ -974,7 +1074,7 @@ button {
 .ficons {
     display: flex;
     justify-content: center;
-    gap: 1rem; /* Good spacing between icons */
+    gap: 1rem;
     margin-top: 0.5rem;
 }
 
@@ -985,19 +1085,19 @@ button {
 }
 
 .ficons a:hover {
-    color: #1e90ff; /* Highlight effect */
+    color: #1e90ff;
 }
 
 /* Responsive Design */
 @media (max-width: 900px) {
     .fcontainer {
-      flex-direction: column;  /* Stack items on small screens */
-      text-align: center;    /* Center align all items */
+        flex-direction: column;
+        text-align: center;
     }
 
     .fleft {
-      margin-left: 0;      /* Remove left margin */
-      max-width: 100%;     /* Take full width */
+        margin-left: 0;
+        max-width: 100%;
     }
 
     .fright {
@@ -1006,20 +1106,5 @@ button {
 
     .ficons {
         justify-content: center;
-    }
-}
-
-/* Responsive Service Cards */
-@media (max-width: 768px) {
-    .scards-container {
-        display: grid;        /* Change to grid */
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible grid */
-        justify-content: center; /* Center the cards */
-    }
-
-    .scard {
-        width: 100%;          /* Take full width in the grid column */
-        max-width: 400px;     /* Optional: limit max width of cards */
-        margin: 0 auto;        /* Center individual cards horizontally */
     }
 }
