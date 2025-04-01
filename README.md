@@ -26,22 +26,24 @@ This website is designed for FiBear Network Technologies Corp. to provide inform
 *   **cdnjs:**  External library for Font Awesome icons (loaded via CDN).
 *   **Google Maps Embed API:** For displaying a map in the contact section.
 
-## File Structure
-Use code with caution.
-Markdown
+## 📂 Project Structure
+```
 FiBear-Network-Website/
-├── index.html # Main HTML file
-├── styles.css # CSS stylesheet
-├── script.js # JavaScript file
-├── logo.png # Company logo
-├── play.png # Play icon for video button
-├── smiley.png # Smiley face image for About Us card
-├── child-2.png # Image for Our Mission card
-├── child-3.png # Image for Our Vision card
-├── jobopportunities.png # Service card images
-├── qrcode.png # QR code image for mobile app download
-├── README.md # This file
-└── ... (other assets)
+├── index.html       # Main HTML file
+├── styles.css       # CSS stylesheet
+├── script.js        # JavaScript file
+├── assets/          # Folder for images and icons
+│   ├── logo.png         # Company logo
+│   ├── play.png         # Play icon for video button
+│   ├── smiley.png       # Smiley face image for About Us card
+│   ├── child-2.png      # Image for Our Mission card
+│   ├── child-3.png      # Image for Our Vision card
+│   ├── jobopportunities.png # Service card image
+│   ├── qrcode.png       # QR code image for mobile app download
+│   └── ... (other assets)
+├── README.md       # Project documentation
+└── ... (other necessary files)
+```
 
 ## Setup/Installation
 
