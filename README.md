@@ -86,6 +86,10 @@ If you'd like to contribute to this project, please follow these steps:
 *   Font Awesome: [https://fontawesome.com/](https://fontawesome.com/)
 *   cdnjs: [https://cdnjs.com/](https://cdnjs.com/)
 
+## Author
+
+Me and Dylan the creator of website
+
 ## License
 
 This project is licensed under the [Specify License, e.g., MIT License] - see the `LICENSE` file for details.  (You should create a LICENSE file if you intend to open-source the project).
