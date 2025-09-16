@@ -9,7 +9,7 @@
   /* General Body Styles */
   /* Defines the overall style for the body of the page */
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Archivo Black', sans-serif;
     background-color: #e6e6e6;
     color: #333;
     line-height: 1.6; /* Sets the default line height for readability */
@@ -25,7 +25,7 @@
     justify-content: space-between; /* Distributes space evenly between items */
     align-items: center; /* Vertically aligns items in the center */
     width: 100%;
-    height: 80px;
+    height: 60px;
     background-color: #fff;
     padding: 0 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
@@ -70,7 +70,7 @@
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: color 0.3s ease,
-      background-color 0.3s ease; /* Smooth transition for hover effects */
+    background-color 0.3s ease; /* Smooth transition for hover effects */
   }
   
   .menu li a:hover {
@@ -80,8 +80,9 @@
   
   /* Register button styles */
   .menu li.register a {
-    background-color: #007bff;
+    background-color: #00ABB9;
     color: #fff;
+    border-radius: 1000px;
   }
   
   .menu li.register a:hover {
@@ -177,13 +178,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
+    flex-direction: row;
     background: url("bg.png") no-repeat
       center center; /* Sets the background image, no-repeat, and centered */
     background-size: cover; /* Scales the background image to cover the entire area */
     text-align: center;
     padding: 2rem; /* Add padding on smaller screens */
-    margin-right: 15rem;
+    height: 101vh;
   }
   
   /* Content within the hero section */
@@ -196,6 +197,11 @@
     font-size: 3rem;
     color: white;
     margin-bottom: 1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for better readability */
+    text-align: center;
+    max-width: 600px;
+    margin-left: 1rem;
   }
   
   /* Hero description */
@@ -203,6 +209,8 @@
     font-size: 1.2rem;
     color: white;
     margin-bottom: 1.5rem;
+    text-align: center;
+    max-width: 500px;
   }
   
   /* Buttons container */
@@ -220,13 +228,21 @@
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-left: 10px;
+    
   }
   
   /* Client login button styles */
   .client-login {
-    background-color: #007bff;
+    background-color: #00ABB9;
     color: white;
     transition: background 0.3s ease-in-out;
+    border-radius: 1000px;
+    align-items: center;
+    text-align: center;
   }
   
   .client-login:hover {
@@ -240,13 +256,17 @@
     background-color: transparent;
     color: white;
     padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 5px;
+    
   }
   
   /* Watch video button image */
   .watch-video img {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-right: 0.5rem;
+    width: 35px;
+    height: auto;
+    margin-right: 8px;
   }
   
   /*------------------------------------------------------------------------------
@@ -321,12 +341,11 @@
   /* About section title */
   .atitle {
     margin-top: 4rem;
-    display: center;
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 1rem;
-  }
+    }
   
   /* About section description */
   .adescription {
@@ -342,7 +361,7 @@
     flex-wrap: wrap;
   }
   
-  /* Individual card styles */
+  /* Individual card styles */  
   .card {
     background: white;
     padding: 1rem;
@@ -382,7 +401,7 @@
   /* Read more button styles */
   .readmore {
     background-color: transparent;
-    color: #007bff;
+    color: #00ABB9;
     border: none;
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
@@ -725,7 +744,7 @@
   
   /* Title styling */
   .sbtitle {
-    color: #333;
+    color: #21395f;
     font-weight: bold;
     margin-bottom: 1rem;
   }
@@ -742,7 +761,7 @@
   .sbcards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 50px;
     width: 100%;
     max-width: 1200px; /* Add a max-width to the container */
     margin: 0 auto; /* Center the container */
@@ -754,14 +773,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 30px;
+    border-radius: 20px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    width: 110%;
     min-height: 190px;
     padding: 1.5rem 2.5rem;
     position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Card hover animation */
   }
-  
+
+  /* Card hover animation */
+  .sbcards:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
   /* Left and Right Sections */
   .left-text {
     text-align: center;
@@ -780,44 +806,93 @@
     left: 50%;
     top: 10%;
     bottom: 10%;
-    width: 2px;
+    width: 3px;
     background: #ddd;
   }
   
   /* Plan Title */
   .left-text h3 {
     font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 20px;
+    color: #666;
+    margin-bottom: 10px;
+    align-items: left;
+    padding-right: 20px;
   }
   
   /* Plan Price */
   .left-text p {
-    font-size: 1.5rem;
-    color: #666;
-    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #21395f;
+    font-weight: bold;
+    padding-right: 20px;
+    align-items: left;
+  }
+  .left-text p1 {
+    font-size: 1rem;
+    color: #21395f;
+    font-weight: bold;
+    padding-right: 20px;
+    align-items: left;
+  }
+  .planmore {
+    font-size: 1rem;
+    color: #00ABB9;
+    border: none;
+    margin-top: 10px;
+    border-radius: 500px;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease; /* Button hover animation */
   }
   
+  .planmore:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transform: translateY(-3px);
+  }
   /* Features List */
   .right-text ul {
     list-style: none;
-    padding: 0;
-    margin: 15px 0;
+    padding: 10px;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+    flex-direction: column;
   }
   
   .right-text ul li {
-    font-size: 1rem;
-    color: #333;
+    font-size: 17px;
+    color: #00ABB9;
     margin-bottom: 5px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 10px;
+    justify-content: flex-start;
+    gap: 1rem;
   }
+
+   /* Checkmark pulse animation */
+@keyframes checkPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+   .right-text ul li::before {
+    content: "✓"; /* Unicode character for a checkmark */
+    color: #00ABB9; /* Blue color for the checkmark */
+    font-weight: bold;
+    margin-right: 10px;
+    align-items: center;
+    width: 15px;
+    display: inline-block; /* Required for the animation to work */ 
+   }
+
+    .right-text ul li:hover::before {
+      animation: checkPulse 0.6s ease; /* Apply the pulse animation on hover */
+    }
+  
   
   /*------------------------------------------------------------------------------
     SUBSCRIPTION Responsive Styles (Media Queries)
@@ -839,6 +914,7 @@
       height: auto;
       min-height: auto;
       text-align: center;
+      width: 80%;
     }
   
     .sbcards::before {
@@ -1182,7 +1258,8 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
+  }
+    
 
 /* Keyframes for Fade-Out Animation */
 @keyframes fadeOut {
@@ -1194,6 +1271,13 @@
         opacity: 0;
         transform: translateY(20px);
     }
+}
+
+/* Keyframes for Checkmark Pulse Animation */
+@keyframes checkPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 /* CSS Classes to Control Animation */
@@ -1230,7 +1314,7 @@
 
 .scards-container .scard {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(20px);  
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
